@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Deploy') {
+        stage('build') {
             steps {
                 timeout(time: 2, unit: 'MINUTES') {
                     sh 'for n in `seq 1 10`; do echo $n; sleep 1; done'
