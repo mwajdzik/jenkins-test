@@ -1,12 +1,19 @@
 plugins {
 	id 'org.springframework.boot' version '2.4.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'com.google.cloud.tools.jib' version '2.7.1'
 	id 'java'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+jib {
+	to {
+		image = 'demo:jib'
+	}
+}
 
 repositories {
 	mavenCentral()
